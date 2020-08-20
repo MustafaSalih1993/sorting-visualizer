@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
+    />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      background-color: black;
+      color: #f1f1f1;
+    }
+    select {
+      background-color: black;
+      color: #f1f1f1;
+    }
+    .container {
+      text-align: center;
+      margin-top: 2em;
+    }
+    .btns {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 1em;
+      margin-bottom: 2em;
+    }
+  </style>
+
+  <body>
+    <div class="container">
+      <h2>SORTING VISUALIZER</h2>
+      <div class="btns">
+        <div>
+          <label for="selectAlgo">Generate</label>
+          <button id="gen">Generate Random Bars</button>
+        </div>
+        <div>
+          <label for="selectAlgo">Select Algorithm</label>
+          <select id="selectAlgo">
+            <option class="opt" id="bbs">Bubble Sort</option>
+            <option class="opt" id="oes">Odd Even Sort</option>
+            <option class="opt" id="is">Insertion Sort</option>
+            <option class="opt" id="ss">Selection Sort</option>
+            <option class="opt" id="qs">Quick Sort</option>
+            <option class="opt" id="cs">Comb Sort</option>
+            <option class="opt" id="shs">Shell Sort</option>
+            <option class="opt" id="css">Cocktail shaker Sort</option>
+            <option class="opt" id="cont">Counting Sort</option>
+          </select>
+        </div>
+        <div>
+          <label for="selectAlgo">Speed</label>
+          <div class="del" style="display: flex;">
+            <label for="delay">+</label>
+            <input id="delay" type="range" min="1" max="100" />
+            <label for="delay">-</label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <canvas></canvas>
+    <script src="./src/bubbleSort.js"></script>
+    <script src="./src/insertionSort.js"></script>
+    <script src="./src/oddEvenSort.js"></script>
+    <script src="./src/selectionSort.js"></script>
+    <script src="./src/quickSort.js"></script>
+    <script src="./src/compSort.js"></script>
+    <script src="./src/shellSort.js"></script>
+    <script src="./src/cocktailShakerSort.js"></script>
+    <script src="./src/countingSort.js"></script>
+    <script src="./src/main.js"></script>
+  </body>
+</html>
