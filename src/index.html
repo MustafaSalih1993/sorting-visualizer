@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
+    />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      background-color: #f5fbef;
+      color: #92ad94;
+    }
+    select {
+      background-color: #f5fbef;
+      color: #92ad94;
+    }
+    .container {
+      text-align: center;
+      margin-top: 2em;
+    }
+    .btns {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 1em;
+      margin-bottom: 2em;
+    }
+  </style>
+
+  <body>
+    <div class="container">
+      <h2>SORTING VISUALIZER</h2>
+      <div class="btns">
+        <div>
+          <label for="selectAlgo">Generate</label>
+          <button id="gen">Generate Random Bars</button>
+        </div>
+        <div>
+          <label for="selectAlgo">Select Algorithm</label>
+          <select id="selectAlgo">
+            <option class="opt" id="bubblesortOption">Bubble Sort</option>
+            <option class="opt" id="oddevensortOption">Odd Even Sort</option>
+            <option class="opt" id="insertionsortOption">Insertion Sort</option>
+            <option class="opt" id="selectionsortOption">Selection Sort</option>
+            <option class="opt" id="quicksortOption">Quick Sort</option>
+            <option class="opt" id="compsortOption">Comp Sort</option>
+            <option class="opt" id="shellsortOption">Shell Sort</option>
+            <option class="opt" id="cocktailsortOption">
+              Cocktail shaker Sort
+            </option>
+            <option class="opt" id="countingsortOption">Counting Sort</option>
+          </select>
+        </div>
+        <div>
+          <label for="selectAlgo">Speed</label>
+          <div class="del" style="display: flex">
+            <label for="delay">+</label>
+            <input id="delay" type="range" min="1" max="200" />
+            <label for="delay">-</label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <canvas></canvas>
+    <script src="./operations/bubbleSort.js"></script>
+    <script src="./operations/insertionSort.js"></script>
+    <script src="./operations/oddEvenSort.js"></script>
+    <script src="./operations/selectionSort.js"></script>
+    <script src="./operations/quickSort.js"></script>
+    <script src="./operations/compSort.js"></script>
+    <script src="./operations/shellSort.js"></script>
+    <script src="./operations/cocktailShakerSort.js"></script>
+    <script src="./operations/countingSort.js"></script>
+    <script src="./main.js" defer></script>
+  </body>
+</html>
