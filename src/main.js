@@ -19,7 +19,7 @@ let arr = [];
 // generating values on startup
 genArr();
 
-const w = (canvas.width - 20) / arr.length; //bars width
+let w = (canvas.width - 20) / arr.length; //bars width
 
 //change active bars color
 function colorBars(a, b) {
@@ -122,6 +122,18 @@ function animate() {
   requestAnimationFrame(animate);
   draw();
 }
+
+//Updating variables for window resize
+function windowResize() {
+  canvas.width = window.innerWidth - 10;
+  canvas.height = window.innerHeight / 2;
+
+  w = (canvas.width - 20) / arr.length;
+}
+
+//init the event listeners for window resize
+window.addEventListener('resize', windowResize);
+
 //FUNCTIONS CALL HERE
 init();
 animate();
