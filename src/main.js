@@ -75,6 +75,7 @@ async function init() {
   //NOTE Event Listeners for all the selecting options
   generateBtn.addEventListener("click", genArr);
 
+
   select.addEventListener("change", async (e) => {
     select.disabled = true;
     switch (e.target.value) {
@@ -108,6 +109,7 @@ async function init() {
       default:
         break;
     }
+    e.target.value = "Choose algorithm...";
   });
 
   delay.addEventListener("change", (e) => {
