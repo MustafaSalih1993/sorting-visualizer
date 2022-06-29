@@ -53,6 +53,7 @@ function genArr() {
     });
   }
   select.disabled = false;
+  select.value = "Choose algorithm...";
 }
 
 //draw the bars in the array arr
@@ -73,7 +74,8 @@ function draw() {
 //init the event listeners and its behavior
 async function init() {
   //NOTE Event Listeners for all the selecting options
-  generateBtn.addEventListener("click", genArr);
+  generateBtn.addEventListener("click", genArr)
+
 
 
   select.addEventListener("change", async (e) => {
